@@ -1,4 +1,4 @@
-use std::collections::HashSet;
+use std::collections::{HashSet,HashMap};
 
 fn main() {
     // hola mundo
@@ -36,6 +36,7 @@ fn main() {
     println!("{my_float2}");
 
     let mut my_bool: bool= false;
+    println!("{my_bool}");
     my_bool=true;
     println!("{my_bool}");
 
@@ -59,7 +60,45 @@ fn main() {
     println!("{}",my_list[0]);
 
     // Sets
-    let my_set: HashSet<&str> =vec!["nombre","apellido","@edad"].into_iter().collect();
+    let mut my_set: HashSet<&str> =vec!["nombre","apellido","@edad"].into_iter().collect();
+    my_set.insert("nombre");
     println!("{:?}",my_set);
 
+    //mapas
+    let my_map:HashMap<&str,i32>=vec![("brais",36)].into_iter().collect();
+    println!("{:?}",my_map);
+
+    //bucles
+    for value in &my_list{
+        println!("{}",value);
+    }
+
+    for (key,value) in my_map{
+        println!("{}{}",key,value);
+    }
+
+    let mut my_counter: usize=0;
+    while my_counter<my_list.len() {
+        println!("{}",my_list[my_counter]);
+        my_counter+=1;
+        
+    }
+
+    my_function();
 }
+
+fn my_function(){
+    println!("esto es una funcion");
+}
+
+/* 
+struct MyStruct{
+    age: i32,
+    name: &str,
+}
+
+impl MyStruct {
+    fn new(name: &str,age:i32)-> MyStruct{
+        MyStruct { age: (), name: () }
+    }
+} */
