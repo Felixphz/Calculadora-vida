@@ -59,7 +59,7 @@ fn main() {
     println!("{}",my_list[0]);
 
     // Sets
-    let my_set: HashSet<&str> =vec!["nombre","apellido","@edad"];
+    let my_set: HashSet<&str> =vec!["nombre","apellido","@edad"].into_iter().collect();
     println!("{:?}",my_set);
 
 }
