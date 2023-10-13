@@ -7,7 +7,7 @@ fn main() {
     let mut allowance=String::new();
     let mut bolsa_dinero: i32=0;
     
-    
+
     println!("Ingresa tu nombre: ");
     io::stdin().read_line(&mut name).expect("Error al leer el nombre");
 
